@@ -3,5 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Lynt <strawww@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "js": "node_modules/.bin/browserify scripts/main.js -o dist/bundle.js"
+  },
+  "devDependencies": {
+    "browserify": "^14.3.0"
+  }
 }
