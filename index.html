@@ -9,26 +9,16 @@
   <link href="./styles/main.css" rel="stylesheet">
 </head>
 <body>
-    <form id="cake-form">
-      <label for="name">Name</label>
-      <input id="name" type="text" required />
-      <label for="email">Email</label>
-      <input id="email" type="email" required/>
-      <fieldset name="cake-type">
-        <legend>Type of Cake</legend>
-        <input id="cake-spiderman" type="checkbox" />
-        <label for="cake-spiderman">Spiderman Cake</label>
-        <input id="cake-batman" type="checkbox" />
-        <label for="cake-batman">Batman Cake</label>
-        <input id="cake-supergirl" type="checkbox" />
-        <label for="cake-supergirl">Supergirl Cake</label>
-        <input id="cake-batgirl" type="checkbox" />
-        <label for="cake-batgirl">Batgirl Cake</label>
   <div class="wrapper">
     <h1 class="header">Cake Enquiry Form</h1>
+    <form id="cake-form" class="cake-form">
+      <label for="name" class="label">Name:</label>
+      <input id="name" type="text" class="input" required />
+      <label for="email" class="label">Email:</label>
+      <input id="email" type="email" class="input" required/>
+      <fieldset name="cake-type" class="fieldset">
+        <legend class="label">Type of Cake</legend>
       </fieldset>
-      <fieldset name="event-type">
-        <legend>Celebration Type</legend>
         <input id="event-birthday" type="radio" name="event-type" required/>
         <label for="event-birthday">Birthday</label>
         <input id="event-wedding" type="radio" name="event-type" required/>
@@ -38,11 +28,13 @@
         <input id="event-other" type="radio" name="event-type" required/>
         <label for="event-other">Other</label>
         <input id="event-other-text" type="text" name="event-type"/>
+      <fieldset name="event-type" class="fieldset">
+        <legend class="label">Celebration Type</legend>
       </fieldset>
-      <label for="cake-dreams">Tell us about your dream cake:</label>
-      <textarea name="textarea"></textarea>
-      <button type="submit">Send away</button>
-      <input type="reset" value="Restart" />
+      <label for="cake-dreams" class="label">Tell us about your dream cake:</label>
+      <textarea name="cake-dreams" class="input"></textarea>
+      <button type="submit" class="button">Send away</button>
+      <input type="reset" class="reset" value="Restart" />
     </form>
   </div>
   <script type="text/javascript" src="./dist/bundle.js"></script>
