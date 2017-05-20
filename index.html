@@ -18,18 +18,42 @@
       <input id="email" type="email" class="input" required/>
       <fieldset name="cake-type" class="fieldset">
         <legend class="label">Type of Cake:</legend>
+        <label for="cake-spiderman" class="checkbox-option">
+          <input id="cake-spiderman" type="checkbox" name="cake-type"/>
+          Spiderman Cake
+        </label>
+        <label for="cake-batman" class="checkbox-option">
+          <input id="cake-batman" type="checkbox" name="cake-type" />
+          Batman Cake
+        </label>
+        <label for="cake-supergirl" class="checkbox-option">
+          <input id="cake-supergirl" type="checkbox" name="cake-type"/>
+          Supergirl Cake
+        </label>
+        <label for="cake-batgirl" class="checkbox-option">
+          <input id="cake-batgirl" type="checkbox" name="cake-type"/>
+          Batgirl Cake
+        </label>
       </fieldset>
-        <input id="event-birthday" type="radio" name="event-type" required/>
-        <label for="event-birthday">Birthday</label>
-        <input id="event-wedding" type="radio" name="event-type" required/>
-        <label for="event-wedding">Wedding</label>
-        <input id="event-corporate" type="radio" name="event-type" required/>
-        <label for="event-corporate">Corporate</label>
-        <input id="event-other" type="radio" name="event-type" required/>
-        <label for="event-other">Other</label>
-        <input id="event-other-text" type="text" name="event-type"/>
       <fieldset name="event-type" class="fieldset">
         <legend class="label">Celebration Type:</legend>
+        <label for="event-birthday" class="radio-option">
+          <input id="event-birthday" type="radio" name="event-type" required/>
+          Birthday
+        </label>
+        <label for="event-wedding" class="radio-option">
+          <input id="event-wedding" type="radio" name="event-type" required/>
+          Wedding
+        </label>
+        <label for="event-corporate" class="radio-option">
+          <input id="event-corporate" type="radio" name="event-type" required/>
+          Corporate
+        </label>
+        <label for="event-other" class="radio-option">
+          <input id="event-other" type="radio" name="event-type" required/>
+          Other:
+        </label>
+        <input id="event-other-text" type="text" name="event-type" class="input"/>
       </fieldset>
       <label for="cake-dreams" class="label">Tell us about your dream cake:</label>
       <textarea name="cake-dreams" class="input"></textarea>
