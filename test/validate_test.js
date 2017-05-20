@@ -50,6 +50,14 @@ describe('#validate', () => {
   });
 
   it('submits the form passed in if other is not selected', () => {
-    throw new Error('Implement this test');
+    const submitStub = stub();
+    const eventStub = stub();
+    const form = { submit: submitStub };
+    const event = { preventDefault: eventStub };
+    const validateForm = validate(form);
+    validateForm(event);
+    expect(eventStub.called).to.equal(true);
+    expect(otherTextInput.getAttribute('class')).to.equal('input');
+    expect(submitStub.called).to.equal(true);
   });
 });
