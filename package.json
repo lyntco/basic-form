@@ -5,9 +5,12 @@
   "author": "Lynt <strawww@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "js": "node_modules/.bin/browserify scripts/main.js -o dist/bundle.js"
+    "js": "node_modules/.bin/browserify scripts/main.js -o dist/bundle.js",
+    "test": "node_modules/.bin/mocha test"
   },
   "devDependencies": {
-    "browserify": "^14.3.0"
+    "browserify": "^14.3.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.4.1"
   }
 }
