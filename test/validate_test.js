@@ -6,7 +6,15 @@ const { validate } = require('../scripts/validate');
 describe('#validate', () => {
   let otherRadioOption;
   let otherTextInput;
+  let submitStub;
+  let eventStub;
+  let form;
+  let event;
   beforeEach(() => {
+    submitStub = stub();
+    eventStub = stub();
+    form = { submit: submitStub };
+    event = { preventDefault: eventStub };
     otherRadioOption = document.createElement('input');
     otherTextInput = document.createElement('input');
     otherRadioOption.setAttribute('id', 'event-other');
@@ -23,11 +31,7 @@ describe('#validate', () => {
   after(jsdom);
 
   it('does not submit the form passed in if other is selected and there is no text', () => {
-    const submitStub = stub();
-    const eventStub = stub();
     otherRadioOption.checked = true;
-    const form = { submit: submitStub };
-    const event = { preventDefault: eventStub };
     const validateForm = validate(form);
     validateForm(event);
     expect(eventStub.called).to.equal(true);
@@ -36,12 +40,8 @@ describe('#validate', () => {
   });
 
   it('submits the form passed in if other selected and has text', () => {
-    const submitStub = stub();
-    const eventStub = stub();
     otherRadioOption.checked = true;
     otherTextInput.value = 'New Years Eve';
-    const form = { submit: submitStub };
-    const event = { preventDefault: eventStub };
     const validateForm = validate(form);
     validateForm(event);
     expect(eventStub.called).to.equal(true);
@@ -50,10 +50,6 @@ describe('#validate', () => {
   });
 
   it('submits the form passed in if other is not selected', () => {
-    const submitStub = stub();
-    const eventStub = stub();
-    const form = { submit: submitStub };
-    const event = { preventDefault: eventStub };
     const validateForm = validate(form);
     validateForm(event);
     expect(eventStub.called).to.equal(true);
