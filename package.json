@@ -5,8 +5,10 @@
   "author": "Lynt <strawww@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "build": "yarn test && yarn lint && yarn js && yarn css",
     "js": "node_modules/.bin/browserify scripts/main.js -o dist/bundle.js",
     "lint": "node_modules/.bin/eslint ./scripts",
+    "css": "node_modules/.bin/postcss --use precss autoprefixer -d ./styles/main.css -o dist/styles.css",
     "test": "node_modules/.bin/mocha test"
   },
   "devDependencies": {
