@@ -1,4 +1,4 @@
-const validate = (form) => (e) => {
+const validate = form => (e) => {
   e.preventDefault();
   const isOtherEvent = document.getElementById('event-other').checked;
   const otherInput = document.getElementById('event-other-text');
@@ -11,8 +11,8 @@ const validate = (form) => (e) => {
 
 const addFormListener = () => {
   const form = document.getElementById('cake-form');
-  form.addEventListener("submit", validate(form), false);
-}
+  form.addEventListener('submit', validate(form), false);
+};
 
 module.exports = {
   addFormListener,
