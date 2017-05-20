@@ -1,3 +1,8 @@
+$white: #E9EAEE;
+$blue-mid: #69737C;
+$blue-dark: #374550;
+$red: #E99999;
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -7,8 +12,8 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  color: #E9EAEE;
-  background-color: #374550;
+  color: $white;
+  background-color: $blue-dark;
   font-size: 12pt;
 }
 
