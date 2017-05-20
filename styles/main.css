@@ -1,9 +1,13 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
   color: #E9EAEE;
-  background-color: #374550
+  background-color: #374550;
+  font-size: 12pt;
 }
