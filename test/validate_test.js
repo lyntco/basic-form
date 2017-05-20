@@ -16,7 +16,7 @@ describe('#validate', () => {
   });
 
   afterEach(() => {
-    document.body = document.createElement('div');
+    document.body.innerHTML = '';
   });
 
   after(jsdom);
