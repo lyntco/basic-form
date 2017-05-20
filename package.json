@@ -11,6 +11,7 @@
   "devDependencies": {
     "browserify": "^14.3.0",
     "chai": "^3.5.0",
-    "mocha": "^3.4.1"
+    "mocha": "^3.4.1",
+    "sinon": "^2.2.0"
   }
 }
