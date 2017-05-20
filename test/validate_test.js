@@ -11,6 +11,7 @@ describe('#validate', () => {
     otherTextInput = document.createElement('input');
     otherRadioOption.setAttribute('id', 'event-other');
     otherTextInput.setAttribute('id', 'event-other-text');
+    otherTextInput.setAttribute('class', 'input');
     document.body.appendChild(otherRadioOption);
     document.body.appendChild(otherTextInput);
   });
